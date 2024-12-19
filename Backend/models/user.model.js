@@ -12,7 +12,12 @@ const userSchema = new mongoose.Schema({
       type: "string",
       minlenght: [4, "firstname must be atlest 4 characters long"],
     },
-  },
+  }, email: {
+    type: String,
+    required: true,
+    unique: true,
+    minlength: [ 5, 'Email must be at least 5 characters long' ],
+},
   password: {
     type: "string",
     required: true,
@@ -27,7 +32,7 @@ userSchema.methods.generateAuthToken = function () {
   const token = jwt.sign({ _id: this._id }, process.env.JWT_SECRET);
   return token;
 };
-userSchema.methods.comparePassword = async function () {
+userSchema.methods.comparePassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 userSchema.statics.hashPassword = async function (password) {

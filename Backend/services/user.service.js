@@ -13,7 +13,7 @@ module.exports.createUser = async ({
     fullname: { firstname, lastname },
     email,
     password,
-  })
+  });
   return user;
 };
 // iska kam userko create karna or kuch checks karna

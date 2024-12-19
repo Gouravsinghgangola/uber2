@@ -11,8 +11,8 @@ router.post(
       .isLength({ min: 3 })
       .withMessage("firstname must be 3 characters long"),
     body("password")
-      .isLength({ min: 5 })
-      .withMessage("password must be at least 5 characters long"),
+      .isLength({ min: 6 })
+      .withMessage("password must be at least 6 characters long"),
   ],
   userController.registerUser
 );
@@ -20,10 +20,10 @@ router.post(
 router.post(
   "/login",
   [
-    body("email").isEmail().withMessage("invalid email"),
+    body("email").isEmail().withMessage('invalid email'),
     body("password")
       .isLength({ min: 6 })
-      .withMessage("Password must be at least 6 characters long"),
+      .withMessage('Password must be at least 6 characters long'),
   ],
   userController.loginUser
 );
