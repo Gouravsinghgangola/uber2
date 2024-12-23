@@ -1,7 +1,7 @@
 const userModel = require("../models/user.model");
 const userService = require("../services/user.service");
 const { validationResult, cookie } = require("express-validator");
-const blacklistTokenModel = require("../models/blacklistToken.model");
+const blacklistTokenModel = require("../models/blackListToken.model");
 //user ko create karna ka logic->registeruser
 module.exports.registerUser = async (req, res, next) => {
   const errors = validationResult(req); //validatio ka result(errors ko) check karraga
