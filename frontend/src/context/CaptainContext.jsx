@@ -1,4 +1,5 @@
-import { createContext, useState, useContext } from 'react';
+import { createContext, useState } from 'react';
+import React from 'react';
 
 export const CaptainDataContext = createContext();
 
