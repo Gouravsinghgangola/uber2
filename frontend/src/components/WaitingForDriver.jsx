@@ -15,7 +15,7 @@ const WaitingForDriver = (props) => {
         <img className="h-12" src="https://swyft.pl/wp-content/uploads/2023/05/how-many-people-can-a-uberx-take.jpg" alt=""/>
         <div className="text-right">
         <h2 className="text-lg font-medium">Gourav </h2>
-        <h4 className="text-xl -mt-1 -mb-1 font-semibold">UK 06 1313 </h4>
+        <h4 className="text-xl -mt-1 -mb-1 font-semibold">UK06 AB 1313 </h4>
         <p className="text-sm text-gray-500">Maruti Suzuki Alto</p>
       </div>
       </div>
